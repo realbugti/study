@@ -16,15 +16,10 @@
     <!-- Firebase SDKs -->
     <script type="module">
         // Import Firebase modules using ES module syntax for modern browsers
-        const YOUR_FIREBASE_CONFIG = {
-      apiKey: "AIzaSyCBArZDX7_q4YtI48BQvkOt95xhvu2UJ40",
-      authDomain: "https://realbugti.github.io/study",
-      projectId: "study-1e97d",
-      storageBucket: "YOUR_STORAGE_BUCKET_HERE",
-      messagingSenderId: "515835913903",
-      appId: "1:515835913903:web:7f337d04e948b65f5b565a",
-      // measurementId: "G-S8C6QB76EV" // Include if you have it and want analytics
-    };
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"; 
+
         // Expose Firebase objects globally for access within the Babel-transformed script
         window.firebase = { initializeApp, getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp };
     </script>
